@@ -1,3 +1,4 @@
+import Header from './Header'
 import './globals.css'
 import { Heebo } from 'next/font/google'
 
@@ -11,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className} text-[1.6rem]`}>{children}</body>
+      <body className={`${font.className} text-[1.6rem]`}>
+        <Header />
+        <main>
+         {children}
+        </main>
+      </body>
     </html>
   )
 }
