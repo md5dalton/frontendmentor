@@ -1,3 +1,3 @@
-export default () => (
-    <p>feed</p>
-)
+import { redirect } from "next/navigation"
+
+export default () => redirect("/home/feeds/my-feed")

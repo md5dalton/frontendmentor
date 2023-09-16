@@ -1,18 +1,17 @@
 import Logo from "@/components/Logo"
 import Link from "next/link"
 import { IoBriefcaseOutline } from "react-icons/io5"
-import { FaBars, FaChevronDown, FaCircleCheck, FaRegBell, FaRegComment } from "react-icons/fa6"
+import { FaBars, FaChevronDown, FaChevronUp, FaCircleCheck, FaRegBell, FaRegComment } from "react-icons/fa6"
 import UList from "@/components/UList"
-import { Barlow } from "next/font/google"
-
-const font = Barlow({ preload: false, weight: "700" })
+import ProfileToggler from "@/components/ProfileToggler"
+import { barlow } from "@/components/Fonts"
 
 export default () => (
     <header className="text-xl md:px-6">
-        <div className="flex items-center md:max-w-[1400px] md:m-auto md:gap-4">
+        <div className="flex items-center container gap-4">
             <nav className="flex items-center grow">
-                <Logo className="border-r-very-light-grey border-r-[1px] p-4 min-w-[26px] md:border-none md:py-5 md:px-0" />
-                <div className={`${font.className} flex grow justify-end gap-6`}>
+                <Logo className="border-r-very-light-grey border-r-[1px] p-[0.9rem] pl-0 min-w-[26px] md:border-none md:py-5 md:px-0" />
+                <div className={`${barlow} flex grow justify-end gap-6`}>
                     <div className="hidden gap-4 md:flex italic uppercase items-center md:text-sm">
                         <UList
                             className="flex gap-4"
@@ -38,11 +37,13 @@ export default () => (
                     </div>
                 </div> 
             </nav>
-            <div className="hidden items-center gap-4 md:flex">
-                <div className="h-10 w-10 bg-black rounded-full"></div>
+            <ProfileToggler
+                className="hidden md:flex gap-2"
+                open={<FaChevronUp />}
+            >
                 <FaChevronDown />
-            </div>
-            <FaBars className="mx-4 md:hidden" />
+            </ProfileToggler>
+            <FaBars className="md:hidden" />
         </div>
     </header>
 )

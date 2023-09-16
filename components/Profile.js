@@ -1,0 +1,1 @@
+export default ({ size }) => <div className={`${size} bg-black rounded-full`}></div>
