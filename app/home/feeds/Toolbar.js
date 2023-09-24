@@ -14,7 +14,7 @@ export default ({ children }) => (
             >
                 <FaChevronRight />
             </ProfileToggler>
-            <div className="flex justify-end grow text-sm text-light-grey font-semibold ">
+            <div className="flex justify-end grow text-sm text-light-grey font-semibold md:text-lg">
                 <UList
                     className="flex border-b-very-light-grey border-b-[1px] w-fit py-1"
                     items={["My feed", "Latest feedback"]}
