@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-    @apply md:max-w-[1400px] md:m-auto px-4
+    @apply px-4 w-[calc(100%-4.5rem)] md:max-w-[140rem] md:m-auto md:p-0 lg:w-[calc(100%-8rem)]
 }
 
 /* https://dev.to/derick1530/how-to-create-scrollable-element-in-tailwind-without-a-scrollbar-4mbd */
