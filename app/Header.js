@@ -7,12 +7,12 @@ import ProfileToggler from "@/components/ProfileToggler"
 import { barlow } from "@/components/Fonts"
 
 export default () => (
-    <header className="text-xl md:px-6">
-        <div className="flex items-center container gap-4">
+    <header className="text-xl">
+        <div className="flex items-center container gap-4 md:gap-6">
             <nav className="flex items-center grow">
                 <Logo className="border-r-very-light-grey border-r-[1px] p-[0.9rem] pl-0 min-w-[26px] md:border-none md:py-5 md:px-0" />
                 <div className={`${barlow} flex grow justify-end gap-6`}>
-                    <div className="hidden gap-4 md:flex italic uppercase items-center md:text-sm">
+                    <div className="hidden gap-4 md:flex italic font-bold uppercase items-center md:text-sm">
                         <UList
                             className="flex gap-4"
                             items={["challenges", "solutions", "resources"]}
