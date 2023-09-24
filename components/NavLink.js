@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation"
 
 export default ({ children, activeClassName, className, ...props }) => {
     const pathname = usePathname()
-    const active = pathname === props.href 
-    // const active = pathname.startsWith(props.href) 
+    // const active = pathname === props.href 
+    const active = pathname.startsWith(props.href) 
 
     return (
         <Link {...props} className={`${className ? className : ""}${active ? " " + activeClassName : ""}`} >
