@@ -1,5 +1,4 @@
 import UList from "@/components/UList"
-import Link from "next/link"
 import { barlow } from "@/components/Fonts"
 import NavLink from "@/components/NavLink"
 
@@ -8,7 +7,7 @@ export default ({ children }) => <>
         <div className="flex items-center container">
             <h1 className="uppercase font-bold border-x-very-light-grey border-x-[1px] px-[14px] py-[0.8rem] tracking-widest md:px-6 md:py-4">home</h1>
             <UList
-                className="flex gap-2 grow text-grey px-4 py-2 overflow-x-auto no-scrollbar whitespace-nowrap md:gap-6 md:justify-end md:py-4"
+                className="flex gap-2 grow text-grey py-2 overflow-x-auto no-scrollbar whitespace-nowrap md:gap-6 justify-end md:py-4"
                 items={["Feeds", "My challenges", "My network", "My bookmarks"]}
                 itemHandler={item => <NavLink
                     activeClassName="after:scale-x-100" 
