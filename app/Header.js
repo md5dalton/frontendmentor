@@ -12,15 +12,17 @@ export default () => (
             <nav className="flex items-center grow">
                 <Logo className="border-r-very-light-grey border-r-[1px] p-[0.9rem] pl-0 min-w-[26px] lg:border-none lg:py-5 lg:px-0" />
                 <div className={`${barlow} flex grow justify-end gap-6`}>
-                    <div className="hidden gap-4 md:flex italic font-bold uppercase items-center md:text-sm">
+                    <div className="hidden gap-4 md:flex italic font-bold uppercase items-center md:text-xs">
                         <UList
-                            className="flex gap-4"
+                            className="inline-flex gap-4"
                             items={["challenges", "solutions", "resources"]}
-                            itemHandler={item => <Link href={item}>{item}</Link>}
+                            itemHandler={item => <Link href={item} className="primary-link-hover after:mt-1">{item}</Link>}
                         />
-                        <Link href="" className="flex items-center gap-4">
-                            <p>unlock</p> 
-                            <p className="bg-blue text-white text-xs py-1 px-2 rounded-sm not-italic tracking-widest">pro</p> 
+                        <Link href="" className="primary-link-hover after:mt-1">
+                            <div className="flex items-center gap-3">
+                                <p>unlock</p> 
+                                <p className="bg-blue text-white text-[10px] h-[18px] grid place-content-center px-2 rounded-sm not-italic tracking-widest">pro</p> 
+                            </div>
                         </Link>
                     </div>
                     <div className="flex gap-4">
